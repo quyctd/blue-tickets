@@ -18,7 +18,7 @@ class _BottomBarState extends State<BottomBar> {
     const Text('Profile'),
   ];
 
-  void onItemTapped(int index) {
+  void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
     });
@@ -30,11 +30,14 @@ class _BottomBarState extends State<BottomBar> {
       appBar: AppBar(title: const Text('My tickets')),
       body: Center(child: _widgetOptions[_selectedIndex]),
       bottomNavigationBar: BottomNavigationBar(
+          currentIndex: _selectedIndex,
           elevation: 10,
           showSelectedLabels: false,
           showUnselectedLabels: false,
           selectedItemColor: Colors.blueGrey,
           unselectedItemColor: const Color(0xFF526480),
+          onTap: _onItemTapped,
+          type: BottomNavigationBarType.fixed,
           items: const [
             BottomNavigationBarItem(
               icon: Icon(FluentSystemIcons.ic_fluent_home_regular),
