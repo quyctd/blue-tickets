@@ -1,4 +1,6 @@
+import 'package:blue_tickets/utils/app_styles.dart';
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -13,14 +15,22 @@ class HomeScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
               children: [
+                const Gap(40),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
-                        Text('Good Morning'),
-                        Text('Book tickets'),
+                      children: [
+                        Text(
+                          'Good Morning',
+                          style: Styles.headLineStyle3,
+                        ),
+                        const Gap(5),
+                        Text(
+                          'Book tickets',
+                          style: Styles.headLineStyle,
+                        ),
                       ],
                     ),
                     Container(

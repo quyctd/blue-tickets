@@ -1,4 +1,5 @@
 import 'package:blue_tickets/screens/home_screens.dart';
+import 'package:blue_tickets/utils/app_styles.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 
@@ -28,6 +29,7 @@ class _BottomBarState extends State<BottomBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Styles.bgColor,
       body: Center(child: _widgetOptions[_selectedIndex]),
       bottomNavigationBar: BottomNavigationBar(
           currentIndex: _selectedIndex,
