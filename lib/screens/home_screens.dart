@@ -1,3 +1,4 @@
+import 'package:blue_tickets/screens/ticket_view.dart';
 import 'package:blue_tickets/utils/app_styles.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
@@ -58,15 +59,36 @@ class HomeScreen extends StatelessWidget {
                       const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
                   child: Row(
                     children: [
-                      const Icon(FluentSystemIcons.ic_fluent_search_filled,
-                          color: Color(0xFFBFC205)),
+                      const Icon(
+                        FluentSystemIcons.ic_fluent_search_filled,
+                        color: Color(0xFFBFC205),
+                      ),
                       Text('Search', style: Styles.headLineStyle4)
                     ],
                   ),
+                ),
+                const Gap(40),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text('Upcoming Flights', style: Styles.headLineStyle2),
+                    InkWell(
+                      onTap: () {
+                        Navigator.pushNamed(context, '/upcoming');
+                      },
+                      child: Text(
+                        'View All',
+                        style: Styles.textStyle
+                            .copyWith(color: Styles.primaryColor),
+                      ),
+                    ),
+                  ],
                 )
               ],
             ),
           ),
+          const Gap(20),
+          const TicketView(),
         ],
       ),
     );
