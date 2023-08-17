@@ -1,5 +1,6 @@
 import 'package:blue_tickets/screens/hotel_screen.dart';
 import 'package:blue_tickets/screens/ticket_view.dart';
+import 'package:blue_tickets/utils/app_info_list.dart';
 import 'package:blue_tickets/utils/app_styles.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
@@ -105,7 +106,7 @@ class HomeScreen extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text('Hotel', style: Styles.headLineStyle2),
+                Text('Hotels', style: Styles.headLineStyle2),
                 InkWell(
                   onTap: () {
                     Navigator.pushNamed(context, '/upcoming');
@@ -124,10 +125,7 @@ class HomeScreen extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             padding: const EdgeInsets.only(left: 20),
             child: Row(
-              children: const [
-                HotelScreen(),
-                HotelScreen(),
-              ],
+              children: hotelList.map((e) => HotelScreen(hotel: e)).toList(),
             ),
           ),
         ],
