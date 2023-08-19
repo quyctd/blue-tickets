@@ -1,5 +1,6 @@
 import 'package:blue_tickets/utils/app_layout.dart';
 import 'package:blue_tickets/utils/app_styles.dart';
+import 'package:blue_tickets/widgets/app_double_text_widget.dart';
 import 'package:blue_tickets/widgets/icon_text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
@@ -103,7 +104,12 @@ class SearchScreen extends StatelessWidget {
                 ),
               ),
             ),
-          )
+          ),
+          Gap(AppLayout.getHeight(40)),
+          const AppDoubleTextWidget(
+            bigText: 'Upcoming Flights',
+            smallText: 'View all',
+          ),
         ],
       ),
     );
