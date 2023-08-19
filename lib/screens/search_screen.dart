@@ -1,5 +1,6 @@
 import 'package:blue_tickets/utils/app_layout.dart';
 import 'package:blue_tickets/utils/app_styles.dart';
+import 'package:blue_tickets/widgets/icon_text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
@@ -71,6 +72,38 @@ class SearchScreen extends StatelessWidget {
               ),
             ),
           ),
+          Gap(AppLayout.getHeight(25)),
+          const AppIconText(
+            icon: Icons.flight_takeoff_rounded,
+            text: 'Departure',
+          ),
+          Gap(AppLayout.getHeight(20)),
+          const AppIconText(
+            icon: Icons.flight_land_rounded,
+            text: 'Arrival',
+          ),
+          Gap(AppLayout.getHeight(25)),
+          Container(
+            padding: EdgeInsets.symmetric(
+              horizontal: AppLayout.getWidth(18),
+              vertical: AppLayout.getHeight(15),
+            ),
+            decoration: BoxDecoration(
+              color: Color(0xD91130CE),
+              borderRadius: BorderRadius.circular(
+                AppLayout.getWidth(10),
+              ),
+            ),
+            child: Center(
+              child: Text(
+                'Find tickets',
+                style: Styles.textStyle.copyWith(
+                  color: Colors.white,
+                  fontSize: AppLayout.getWidth(16),
+                ),
+              ),
+            ),
+          )
         ],
       ),
     );
