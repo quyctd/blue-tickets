@@ -200,7 +200,6 @@ class ProfileScreen extends StatelessWidget {
                 borderRadius: BorderRadius.circular(
                   AppLayout.getHeight(18),
                 ),
-                color: Styles.primaryColor,
                 boxShadow: [
                   BoxShadow(
                     color: Colors.grey.shade200,
