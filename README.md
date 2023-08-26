@@ -1,6 +1,10 @@
 # Blue Tickets
 
-A new Flutter project.
+A Flutter project.
+
+## Screenshots
+![CleanShot 2023-08-26 at 16 49 30@2x](https://github.com/quyctd/blue-tickets/assets/30380214/c6185c45-0957-4843-a835-1e34ded1daa6)
+
 
 ## Getting Started
 
