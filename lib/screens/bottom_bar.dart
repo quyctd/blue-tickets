@@ -1,4 +1,5 @@
 import 'package:blue_tickets/screens/home_screens.dart';
+import 'package:blue_tickets/screens/profile_screen.dart';
 import 'package:blue_tickets/screens/search_screen.dart';
 import 'package:blue_tickets/screens/tickets_screen.dart';
 import 'package:blue_tickets/utils/app_styles.dart';
@@ -19,7 +20,7 @@ class _BottomBarState extends State<BottomBar> {
     const HomeScreen(),
     const SearchScreen(),
     const TicketsScreen(),
-    const Text('Profile'),
+    const ProfileScreen(),
   ];
 
   void _onItemTapped(int index) {
